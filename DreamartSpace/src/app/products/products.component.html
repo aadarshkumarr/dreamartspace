@@ -1,0 +1,58 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a>
+                <img src="https://indianartideas.in/articleimages/1586942784The%20Starry%20Night%20by%20Vincent%20van%20Gogh.png?q=100" width="100" height="100" alt="">
+                <h6>Acrylic Art</h6>
+            </a>
+        </div>
+
+        <div class="item">
+            <a>
+                <img src="https://image.shutterstock.com/image-illustration/oil-painting-conceptual-abstract-picture-260nw-1445018480.jpg" width="100" height="100" alt="">
+                <h6>Painting</h6>
+            </a>
+   
+        </div>
+
+        <div class="item">
+            <a>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlZSeK5ioIDHGPMbHQ6jjjNf3TgK6bP_NiWg&usqp=CAU" width="100" height="100" alt="">
+                <h6>Glass Painting</h6>
+            </a>
+
+        </div>
+
+        <div class="item">
+            <a>
+                <img src="https://img2.exportersindia.com/product_images/bc-full/2020/1/369504/oil-paintings-1579601518-5263494.jpeg" width="100" height="100" alt="">
+                <h6>Oil Painting</h6>
+            </a>
+
+        </div>
+
+        <div class="item">
+            <a>
+                <img src="https://miro.medium.com/max/1080/1*jWx9suY2k3Ifq4B8A_vz9g.jpeg" width="100" height="100" alt="">
+                <h6>Portraits</h6>
+            </a>
+
+        </div>
+
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="">
+                <h4 style="white-space: nowrap;overflow:hidden;text-overflow:eclipse;max-width:100ch;">{{item.title}}</h4>
+                <p style="white-space: nowrap;overflow:hidden;text-overflow:eclipse;max-width:100ch;">{{item.description}}</p>
+                <p><strong>Price:</strong>${{item.price}}</p>
+                <button class="btn btn-primary" (click)=addtocart(item)>Add to Cart</button>
+    
+            </div>
+    
+        </ng-container>
+    </div>
+</div>
